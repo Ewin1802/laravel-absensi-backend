@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -13,12 +14,40 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
-            'name' => 'Ewin Lantapa',
-            'email' => 'test@example.com',
-            'password' => Hash::make('12345678'),
+        User::factory()->create([
+            'name' => 'EwinLantapa',
+            'email' => 'ewin@test.com',
+            'password' => Hash::make('11111111'),
         ]);
+
+        // data dummy for company
+        \App\Models\Company::create([
+            'name' => 'Badan Pengelolaan Keuangan dan Pendapatan Daerah',
+            'email' => 'bpkpd@bolmut.com',
+            'address' => 'Jl. Trans Sulawesi, Kaidipang',
+            'latitude' => '-7.747033',
+            'longitude' => '110.355398',
+            'radius_km' => '0.5',
+            'time_in' => '07:30',
+            'time_out' => '17:00',
+        ]);
+
+        \App\Models\Company::create([
+            'name' => 'Badan Pencari Wanita',
+            'email' => 'bpkpd@bolmut.com',
+            'address' => 'Jl. Trans Sulawesi, Kaidipang',
+            'latitude' => '-7.747033',
+            'longitude' => '110.355398',
+            'radius_km' => '0.5',
+            'time_in' => '07:30',
+            'time_out' => '17:00',
+        ]);
+
+        // $this->call([
+        //     AttendanceSeeder::class,
+        //     PermissionSeeder::class,
+        // ]);
     }
 }

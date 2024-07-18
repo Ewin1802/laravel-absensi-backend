@@ -45,9 +45,9 @@ class DatabaseSeeder extends Seeder
             'time_out' => '17:00',
         ]);
 
-        // $this->call([
-        //     AttendanceSeeder::class,
-        //     PermissionSeeder::class,
-        // ]);
+        $this->call([
+            AttendanceSeeder::class,
+            PermissionSeeder::class,
+        ]);
     }
 }

@@ -11,6 +11,9 @@ class NoteController extends Controller
     //index
     public function index(Request $request)
     {
+        //get all note
+        // $notes = Note::orderBy('id', 'desc')->get();
+
         //notes by user id
         $notes = Note::where('user_id', $request->user()->id)->orderBy('id', 'desc')->get();
 

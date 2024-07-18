@@ -61,7 +61,7 @@ class AttendanceController extends Controller
         ], 200);
     }
 
-    //check is checkedin
+    //check is checkedin -- cek apakah sudah absen datang atau belum
     public function isCheckedin(Request $request)
     {
         //get today attendance

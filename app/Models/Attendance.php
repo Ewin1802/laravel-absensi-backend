@@ -18,6 +18,7 @@ class Attendance extends Model
         'latlon_out',
     ];
 
+    //mendapatkan data user melalui attendance controller
     public function user()
     {
         return $this->belongsTo(User::class);

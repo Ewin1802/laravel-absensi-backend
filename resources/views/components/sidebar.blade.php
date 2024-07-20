@@ -15,26 +15,26 @@
 
             <li class="nav-item ">
                 <a href="{{ route('users.index') }}" class="nav-link "><i class="fas fa-columns"></i>
-                    <span>Users</span></a>
+                    <span>Pegawai</span></a>
             </li>
 
             <li class="nav-item">
                 <a href="{{ route('companies.show', 1) }}" class="nav-link">
                     <i class="fas fa-columns"></i>
-                    <span>Company</span>
+                    <span>SKPD</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('attendances.index') }}" class="nav-link">
                     <i class="fas fa-columns"></i>
-                    <span>Attendances</span>
+                    <span>Absensi</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a href="{{ route('permissions.index') }}" class="nav-link">
                     <i class="fas fa-columns"></i>
-                    <span>Permission</span>
+                    <span>Persetujuan</span>
                 </a>
             </li>
 

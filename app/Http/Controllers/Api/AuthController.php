@@ -57,8 +57,8 @@ class AuthController extends Controller
         $face_embedding = $request->face_embedding;
 
         //save image
-        $image->storeAs('public/images', $image->hashName());
-        $user->image_url = $image->hashName();
+        // $image->storeAs('public/images', $image->hashName());
+        // $user->image_url = $image->hashName();
 
         $user->face_embedding = $face_embedding;
         $user->save();
